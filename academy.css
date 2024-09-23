@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'avenir-medium';
+    src: url('./assets/fonts/AvenirNext-Medium-06.ttf');
+}
+
+div p {
+    padding-top: 30px;
+    text-align: center;
+    font-family: "avenir-medium";
+    font-size: 200%;
+}
+
+.staffdiv {
+    padding-top: 30px;
+    padding-left: 15%;
+}
+
+.staffdiv p {
+    display: inline-block;
+    position: relative;
+    top: -7em;
+    font-size: 150%;
+    padding-left: 5%;
+    font-family: 'avenir-medium';
+}
+
+.staffdiv .nt {
+    padding-left: 25.5%;
+    position: relative;
+}
+
+.staffdiv img {
+    width: 20%;
+    border-radius: 10px;
+    outline: auto;
+    border-color: black;
+}
+
+@media only screen and (max-width:800px) {
+    #academy {
+      width: 80%;
+      padding: 0;
+      background-color: aliceblue;
+      z-index: 0;
+    }
+  
