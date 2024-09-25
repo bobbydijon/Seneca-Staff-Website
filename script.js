@@ -19,6 +19,10 @@ function getData(academy) {
             // Create an array of promises for image existence checks
             let promises = entries.map(entry => {
                 let entryData = entry.split(",");
+                if (entryData.length < 5) {
+                    console.error('Invalid entry:', entry);
+                    return Promise.resolve({ html: "" });
+                }
                 if (entryData[2] == academy) {
                     let filename = "images/staff-images/" + entryData[1].toLocaleLowerCase() + entryData[0].toLocaleLowerCase() + ".jpg";
                     return checkFileExists(filename).then(exists => {
