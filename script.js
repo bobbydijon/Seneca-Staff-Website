@@ -39,6 +39,7 @@ function getData(academy) {
                         
                     });
                 } else if (entryData[2] != "IA" && entryData[2] != "HSA" && entryData[2] != "FA" && entryData[2] != "AGLA" && academy == "staff") {
+                    console.log(entryData[1]);
                     let filename = "images/staff-images/" + entryData[1].toLocaleLowerCase() + entryData[0].toLocaleLowerCase() + ".jpg";
                     return checkFileExists(filename).then(exists => {
                         if (!exists) {
