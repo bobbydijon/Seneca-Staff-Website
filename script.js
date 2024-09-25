@@ -12,7 +12,6 @@ function getData(academy) {
     fetch("./documents/directory.csv")
         .then(response => response.text())
         .then(data => {
-            let table = [];
             let entries = data.split("\n");
             console.log(academy);
             let staffDiv = document.getElementById("staff");
@@ -20,7 +19,7 @@ function getData(academy) {
             // Create an array of promises for image existence checks
             let promises = entries.map(entry => {
                 let entryData = entry.split(",");
-                if (entryData[2] === academy) {
+                if (entryData[2] == academy) {
                     let filename = "images/staff-images/" + entryData[1].toLocaleLowerCase() + entryData[0].toLocaleLowerCase() + ".jpg";
                     console.log(filename);
                     return checkFileExists(filename).then(exists => {
@@ -39,7 +38,7 @@ function getData(academy) {
                         };
                         
                     });
-                } else if (entryData[2] != "LITA" && entryData[2] != "HEA" && entryData[2] != "FA" && entryData[2] != "AGLA" && academy == "staff") {
+                } else if (entryData[2] != "IA" && entryData[2] != "HSA" && entryData[2] != "FA" && entryData[2] != "AGLA" && academy == "staff") {
                     let filename = "images/staff-images/" + entryData[1].toLocaleLowerCase() + entryData[0].toLocaleLowerCase() + ".jpg";
                     return checkFileExists(filename).then(exists => {
                         if (!exists) {
