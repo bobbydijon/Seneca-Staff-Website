@@ -21,7 +21,6 @@ function getData(academy) {
                 let entryData = entry.split(",");
                 if (entryData[2] == academy) {
                     let filename = "images/staff-images/" + entryData[1].toLocaleLowerCase() + entryData[0].toLocaleLowerCase() + ".jpg";
-                    console.log(filename);
                     return checkFileExists(filename).then(exists => {
                         if (!exists) {
                             filename = "images/staff-images/unknown.jpg";
