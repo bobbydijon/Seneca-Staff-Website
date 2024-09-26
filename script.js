@@ -32,7 +32,7 @@ function getData(academy) {
                         
                         return {
                             html: `
-                                <div id="${entryData[0]}" class="staffdiv">
+                                <div id="${entryData[1]}${entryData[0]}" class="staffdiv">
                                     <img src="./${filename}">
                                     <p><b>${entryData[1]} ${entryData[0]}</b></p><br>
                                     <p class="nt">${entryData[3]}</p><br>
